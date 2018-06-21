@@ -38,6 +38,19 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.css$/,
+				include: [
+					paths.playground,
+				],
+				exclude: [
+					path.resolve('./node_modules'),
+				],
+				use: [
+					{ loader: 'style-loader' },
+        	{ loader: 'css-loader' }
+				]
+			}
 		],
 	},
 	plugins: [
