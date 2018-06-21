@@ -1,15 +1,20 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
-// Uncomment next line to import actions
-// import * as actions from '../../actions';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import Nav from '../Nav';
+import RepoContainer from '../RepoContainer';
 
-const Playground = (/* {Pass down redux props here} */) => {
-	// Initial render entry point here
+// MUI theme
+import theme from '../../Styles/_theme.js';
+
+const Playground = () => {
 	return (
-		<div>
-			PUT STUFF HERE!!!
-		</div>
+		<MuiThemeProvider
+			theme={theme}>
+			<Nav></Nav>
+			<RepoContainer></RepoContainer>
+		</MuiThemeProvider>
 	);
 };
 
