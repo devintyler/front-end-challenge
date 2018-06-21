@@ -1,0 +1,106 @@
+.repoTitle {
+  text-align: center;
+}
+
+.loadingContainer {
+  background: url('/src/assets/images/bandicoot-loading.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 100vw;
+}
+
+.repoContainer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+
+@media screen and (max-width: 1125px) {
+  .repoContainer {
+    justify-content: center;
+  }
+}
+
+.repoItem {
+  flex: 1 1 auto;
+  width: 32%;
+  max-width: 330px;
+  margin: 5px 5px;
+  padding: 10px;
+  min-width: 300px;
+  border: solid 1px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  align-self: flex-start;
+  position: relative;
+}
+@media screen and (max-width: 330px) {
+  .repoItem {
+    min-width: 100%;
+  }
+}
+
+.repoItemTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.repoItemTop__name {
+  font-weight: bold;
+  color: white;
+}
+.repoItemTop__name a {
+  color: #4fc3f7;
+}
+.repoItemTop__lastUpdated {
+  color: rgba(100,100,100,0.6);
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.repoItem__contributorTitle {
+  margin-bottom: 10px;
+}
+.repoItem__contributors {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-y: scroll;
+}
+.repoItem__contributor {
+  background-color: #4fc3f7 !important;
+  margin: 2px;
+  transition: all 0.2s;
+}
+.repoItem__contributor:hover {
+  background-color: #0093c4 !important;
+  cursor: pointer;
+}
+
+.repoItemBottom {
+  font-size: 14px;
+}
+.repoItemBottom__forkCount {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.repoItemBottom__starCount {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.repoItemBottom__starCount svg {
+  font-size: 14px;
+}

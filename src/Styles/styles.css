@@ -1,0 +1,24 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Style Imports */
+@import "_nav.css";
+@import "_search.css";
+@import "_repo.css";
+@import "_error.css";
+
+html {
+  /* background-image: url('/src/assets/images/bandicoot-loading.gif');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; */
+  background-color: white;
+}
+
+body {
+  margin: 70px 0 0;
+  font-family: 'Roboto', sans-serif;
+  color: #192126;
+  padding: 15px 20px;
+}
