@@ -6,7 +6,7 @@ import Playground from '../Playground';
 const Root = ({ store }) => (
 	<Provider store={ store }>
 		<div>
-			<h1>WorkMarket Front End Challenge</h1>
+			<h1 className="repoTitle">Repo Scrape</h1>
 			<Playground />
 		</div>
 	</Provider>
