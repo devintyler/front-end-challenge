@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
-// Uncomment next line to import actions
+import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
@@ -80,7 +80,6 @@ class RepoItem extends React.Component {
   }
 
   handleClick(url) {
-    console.log('im being clicked');
     window.open(url);
     return;
   }
@@ -131,6 +130,11 @@ class RepoItem extends React.Component {
     )
   }
 }
+
+RepoItem.propTypes = {
+	repos: PropTypes.array.isRequired, // eslint-disable-line
+  error: PropTypes.object, // eslint-disable-line
+};
 
 // Use below functions to pass props + actions
 const mapStateToProps = state => ({

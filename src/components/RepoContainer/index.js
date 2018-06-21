@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 // Uncomment next line to import actions
 import * as actions from '../../actions';
 import Typography from '@material-ui/core/Typography';
@@ -47,6 +48,13 @@ class RepoContainer extends React.Component {
     return (<div></div>);
   }
 }
+
+RepoContainer.propTypes = {
+	name: PropTypes.string.isRequired, // eslint-disable-line
+  loading: PropTypes.bool, // eslint-disable-line
+  repos: PropTypes.array, // eslint-disable-line
+  error: PropTypes.object, // eslint-disable-line
+};
 
 // Use below functions to pass props + actions
 const mapStateToProps = state => ({
